@@ -9,6 +9,29 @@ const String KEY_GPS_LONG = "glng="; // 6 GPS LONGキー
 const String KEY_GPS_LONG = "wvel="; // 7 WIND VELOCITYキー
 const String KEY_GPS_LONG = "sbag="; // 8 SAIL BASE ANGLEキー
 const String KEY_GPS_LONG = "sang="; // 9 SAIL ANGLEキー
+const String KEY_GPS_LONG = "rang="; // 10 RUDDER ANGLEキー
+const String KEY_GPS_LONG = "wdeg="; // 11 WIND DEGREEキー
+const String KEY_GPS_LONG = "wtag="; // 12 WIND TARGET ANGLEキー
+const String KEY_GPS_LONG = "mang="; // 13 MACHINE ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 14 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 15 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 16 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 17 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 18 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 19 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 20 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 21 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 22 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 23 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 24 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 25 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 26 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 27 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 28 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 29 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 30 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 31 SAIL ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 32 SAIL ANGLEキー
 
 double dGPSLat[3] = {36.277430, 36.318192, 36.291428};
 double dGPSLong[3] = {140.484012, 140.458269, 140.528449};
