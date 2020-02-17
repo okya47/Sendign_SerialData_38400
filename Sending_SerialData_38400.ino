@@ -1,6 +1,14 @@
 int i = 0;
-const String KEY_GPS_LAT = "glat=";   //GPS LATキー
-const String KEY_GPS_LONG = "glng="; //GPS LONGキー
+const String KEY_GPS_LONG = "lrlr="; // 0 LEFT/RIGHTキー
+const String KEY_GPS_LONG = "updn="; // 1 UP/DOWNキー
+const String KEY_GPS_LONG = "cont="; // 2 COUNTキー
+const String KEY_GPS_LAT = "tlat=";   // 3 TARGET LATキー
+const String KEY_GPS_LONG = "tlng="; // 4 TARGET LONGキー
+const String KEY_GPS_LAT = "glat=";   // 5 GPS LATキー
+const String KEY_GPS_LONG = "glng="; // 6 GPS LONGキー
+const String KEY_GPS_LONG = "wvel="; // 7 WIND VELOCITYキー
+const String KEY_GPS_LONG = "sbag="; // 8 SAIL BASE ANGLEキー
+const String KEY_GPS_LONG = "sang="; // 9 SAIL ANGLEキー
 
 double dGPSLat[3] = {36.277430, 36.318192, 36.291428};
 double dGPSLong[3] = {140.484012, 140.458269, 140.528449};
