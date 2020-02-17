@@ -13,9 +13,52 @@ void sendDblData(String key, double data, int format)
     Serial.println(";");
 }
 
+void sendIntData(String key, int data)
+{
+    //改行を含めないデータを送信する
+    Serial.print(key);
+    Serial.print(data);
+    Serial.print(";");
+}
+
+void sendLongData(String key, long data)
+{
+    //改行を含めないデータを送信する
+    Serial.print(key);
+    Serial.print(data);
+    Serial.print(";");
+}
+
+void sendStrData(String key, String data)
+{
+    //改行を含めないデータを送信する
+    Serial.print(key);
+    Serial.print(data);
+    Serial.print(";");
+}
+
 void sendData() {
     sendDblData(KEY_GPS_LAT, dGPSLat[i], 6);
     sendDblData(KEY_GPS_LONG, dGPSLong[i], 6);
+    sendIntData(KEY_GPS_ALT, round(m_dGpsAlt));
+
+    //日時
+    sendIntData(KEY_GPS_YEAR, m_iGpsYear);
+    sendIntData(KEY_GPS_MONTH, m_iGpsMonth);
+    sendIntData(KEY_GPS_DAY, m_iGpsDay);
+    sendIntData(KEY_GPS_HOUR, m_iGpsHour);
+    sendIntData(KEY_GPS_MINUTE, m_iGpsMinute);
+    sendIntData(KEY_GPS_SECOND, m_iGpsSecond);
+
+    //速度
+    sendDblData(KEY_GPS_SPD_MPH, m_dGpsSpdMph, 1);
+
+    //コース
+    sendDblData(KEY_GPS_COURSE, m_dGpsCourse, 1);
+    sendDblData(KEY_GPS_COURSE_AVE, m_dGpsCourseAve, 1);
+
+    //地磁気
+    sendIntData(KEY_COMPASS, m_iAngle);
 }
 
 void setup() {
