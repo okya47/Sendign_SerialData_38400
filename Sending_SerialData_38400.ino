@@ -1,38 +1,42 @@
 int i = 0;
-const String KEY_GPS_LONG = "lrlr="; // 0 LEFT/RIGHTキー
-const String KEY_GPS_LONG = "updn="; // 1 UP/DOWNキー
-const String KEY_GPS_LONG = "cont="; // 2 COUNTキー
-const String KEY_GPS_LAT = "tlat=";   // 3 TARGET LATキー
-const String KEY_GPS_LONG = "tlng="; // 4 TARGET LONGキー
+const String KEY_LR = "lrlr="; // 0 LEFT/RIGHTキー
+const String KEY_UP_DOWN = "updn="; // 1 UP/DOWNキー
+const String KEY_DATA_COUNT = "cont="; // 2 COUNTキー
+const String KEY_TARGET_LAT = "tlat=";   // 3 TARGET LATキー
+const String KEY_TARGET_LONG = "tlng="; // 4 TARGET LONGキー
 const String KEY_GPS_LAT = "glat=";   // 5 GPS LATキー
 const String KEY_GPS_LONG = "glng="; // 6 GPS LONGキー
-const String KEY_GPS_LONG = "wvel="; // 7 WIND VELOCITYキー
-const String KEY_GPS_LONG = "sbag="; // 8 SAIL BASE ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 9 SAIL ANGLEキー
-const String KEY_GPS_LONG = "rang="; // 10 RUDDER ANGLEキー
-const String KEY_GPS_LONG = "wdeg="; // 11 WIND DEGREEキー
-const String KEY_GPS_LONG = "wtag="; // 12 WIND TARGET ANGLEキー
-const String KEY_GPS_LONG = "mang="; // 13 MACHINE ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 14 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 15 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 16 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 17 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 18 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 19 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 20 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 21 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 22 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 23 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 24 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 25 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 26 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 27 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 28 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 29 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 30 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 31 SAIL ANGLEキー
-const String KEY_GPS_LONG = "sang="; // 32 SAIL ANGLEキー
+const String KEY_WIND_VELOCITY = "wvel="; // 7 WIND VELOCITYキー
+const String KEY_SAIO_BANGLE = "sbag="; // 8 SAIL BASE ANGLEキー
+const String KEY_SAIL_ANGLE = "sang="; // 9 SAIL ANGLEキー
+const String KEY_RUDDER_ANGLE = "rang="; // 10 RUDDER ANGLEキー
+const String KEY_WIND_DEGREE = "wdeg="; // 11 WIND DEGREEキー
+const String KEY_WIND_TANGLE = "wtag="; // 12 WIND TARGET ANGLEキー
+const String KEY_MACHINE_ANGLE = "mang="; // 13 MACHINE ANGLEキー
+const String KEY_UPWIND_ANGLE = "uwag="; // 14 UPWIND ANGLEキー
+const String KEY_DOWNWIND_ANGLE = "dwag="; // 15 DOWNWIND ANGLEキー
+const String KEY_DISTANCE_RETURN = "drtn="; // 16 DISTANCE RETURNキー
+const String KEY_BATTERY_VOLT = "volt="; // 17 BATTERYキー
+const String KEY_WIND_AXISD = "wadt="; // 18 WIND AXIS DISTANCEキー
+const String KEY_WIND_CROSSD = "wcdt="; // 19 WIND CROSS DISTANCEキー
+const String KEY_POTENTIO_VAL = "pval="; // 20 POTENTIOVALキー
+const String KEY_DISTANCE_TARGET = "dtar="; // 21 DISTANCE TARGETキー
+const String KEY_DISTANCE_LAT = "dlat="; // 22 DISTANCE LATキー
+const String KEY_DISTANCE_LONG = "dlng="; // 23 DISTANCE LONGキー
+const String KEY_TARGET_DEGREE = "tdeg="; // 24 TARGET DEGREEキー
+const String KEY_COMPASS_DEGREE = "cdeg="; // 25 COMPASS DEGREEキー
+const String KEY_TEMP_BME280 = "tbme="; // 26 TEMP BME280キー
+const String KEY_HUMID_BME280 = "hbme="; // 27 HUMID BME280キー
+const String KEY_PRESSURE_BME280 = "pbme="; // 28 PRESSURE BME280キー
+const String KEY_GPS_SPEED = "gspd="; // 29 GPS SPEEDキー
+const String KEY_GPS_COURSE = "gcrs="; // 30 GPS COURSEキー
+const String KEY_GO_DIRECTION = "gdrc="; // 31 GO DIRECTIONキー
+const String KEY_POTENTIOVAL_AVE = "pvav="; // 32 POTENTIOVAL AVEキー
 
+String LR[3] = {L, R, L};
+String UpDown[3] = {UP, DOWN, DOWN};
+double dGPSLat[3] = {36.277430, 36.318192, 36.291428};
+double dGPSLong[3] = {140.484012, 140.458269, 140.528449};
 double dGPSLat[3] = {36.277430, 36.318192, 36.291428};
 double dGPSLong[3] = {140.484012, 140.458269, 140.528449};
 
