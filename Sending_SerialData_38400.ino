@@ -33,12 +33,39 @@ const String KEY_GPS_COURSE = "gcrs="; // 30 GPS COURSEキー
 const String KEY_GO_DIRECTION = "gdrc="; // 31 GO DIRECTIONキー
 const String KEY_POTENTIOVAL_AVE = "pvav="; // 32 POTENTIOVAL AVEキー
 
-String LR[3] = {L, R, L};
-String UpDown[3] = {UP, DOWN, DOWN};
-double dGPSLat[3] = {36.277430, 36.318192, 36.291428};
-double dGPSLong[3] = {140.484012, 140.458269, 140.528449};
-double dGPSLat[3] = {36.277430, 36.318192, 36.291428};
-double dGPSLong[3] = {140.484012, 140.458269, 140.528449};
+String LR[3] = {L, R, L};   // 0
+String UpDown[3] = {UP, DOWN, DOWN};    // 1
+int count[3] = {100, 200, 300};     // 2
+double tarGPSLat[3] = {36.277450, 36.277450, 36.277450};    // 3
+double tarGPSLong[3] = {140.45869, 140.45869, 140.45869};   // 4
+double dGPSLat[3] = {36.277430, 36.318192, 36.291428};      // 5
+double dGPSLong[3] = {140.484012, 140.458269, 140.528449};  // 6
+int windVelo[3] = {50, 100, 150};   // 7
+int sail_base_angle[3] = {15, 20, 25};   // 8
+int sail_angle[3] = {20, 25, 30};   // 9
+int rudder_angle[3] = {10, 15, 20};   // 10
+int wind_degree[3] = {-15, 15, 30};     // 11
+int wind_target_angle[3] = {135, 150, 120};     // 12
+int machine_angle[3] = {70, 110, -80};     // 13
+int upwind_angle[3] = {75, 80, 85};     // 14
+int downwind_angle[3] = {110, 120, 105};     // 15
+int distance_return[3] = {100, 50, 80};     // 16
+double battery[3] = {8.0, 7.4, 4.5};     // 17
+double wind_axis_distance[3] = {150.8, 180.8, 120.33};     // 18
+double wind_cross_distance[3] = {140.83, 18.8, 12.33};     // 19
+int potentioval[3] = {50, 54, 80};     // 20
+double distance_target[3] = {240.83, 118.8, 112.33};     // 21
+double distance_lat[3] = {150.8, 180.8, 120.33};     // 22
+double distance_long[3] = {140.83, 18.8, 12.33};     // 23
+int target_deg[3] = {89, 112, 133};     // 24
+int compass_deg[3] = {189, 222, 163};     // 25
+double tempBME280[3] = {28.4, 25.5, 19.9};     // 26
+double humidBME280[3] = {50.5, 45.4, 51.3};     // 27
+double presBME280[3] = {1012.83, 1008.8, 1002.33};     // 28
+double gpsSpeed[3] = {3.3, 4.4, 4.2};     // 29
+int gpsCourse[3] = {130, 140, 150};     // 30
+int goDirection[3] = {189, 222, 163};     // 31
+int potentiovalAve[3] = {11, 22, 33};     // 32
 
 void sendDblData(String key, double data, int format)
 {
