@@ -28,44 +28,56 @@ const String KEY_COMPASS_DEGREE = "cdeg="; // 25 COMPASS DEGREEキー
 const String KEY_TEMP_BME280 = "tbme="; // 26 TEMP BME280キー
 const String KEY_HUMID_BME280 = "hbme="; // 27 HUMID BME280キー
 const String KEY_PRESSURE_BME280 = "pbme="; // 28 PRESSURE BME280キー
-const String KEY_GPS_SPEED = "gspd="; // 29 GPS SPEEDキー
+const String KEY_GPS_SPD_MPH = "gspd="; // 29 GPS SPEEDキー
 const String KEY_GPS_COURSE = "gcrs="; // 30 GPS COURSEキー
 const String KEY_GO_DIRECTION = "gdrc="; // 31 GO DIRECTIONキー
 const String KEY_POTENTIOVAL_AVE = "pvav="; // 32 POTENTIOVAL AVEキー
+const String KEY_GPS_YEAR = "year="; // 33 GPS YEARキー
+const String KEY_GPS_MONTH = "mnth="; // 34 GPSMONTHキー
+const String KEY_GPS_DAY = "dday="; // 35 GPS DAYキー
+const String KEY_GPS_HOUR = "hour="; // 36 GPS HOURキー
+const String KEY_GPS_MINUTE = "mnte="; // 37 GPS MINUTEキー
+const String KEY_GPS_SECOND = "scnd="; // 38 GPS SECONDキー
 
-String LR[3] = {L, R, L};   // 0
-String UpDown[3] = {UP, DOWN, DOWN};    // 1
+String strLR[3] = {L, R, L};   // 0
+String strUpDown[3] = {UP, DOWN, DOWN};    // 1
 int count[3] = {100, 200, 300};     // 2
-double tarGPSLat[3] = {36.277450, 36.277450, 36.277450};    // 3
-double tarGPSLong[3] = {140.45869, 140.45869, 140.45869};   // 4
+double targetGPSLat[3] = {36.277450, 36.277450, 36.277450};    // 3
+double targetGPSLong[3] = {140.45869, 140.45869, 140.45869};   // 4
 double dGPSLat[3] = {36.277430, 36.318192, 36.291428};      // 5
 double dGPSLong[3] = {140.484012, 140.458269, 140.528449};  // 6
-int windVelo[3] = {50, 100, 150};   // 7
-int sail_base_angle[3] = {15, 20, 25};   // 8
-int sail_angle[3] = {20, 25, 30};   // 9
-int rudder_angle[3] = {10, 15, 20};   // 10
-int wind_degree[3] = {-15, 15, 30};     // 11
-int wind_target_angle[3] = {135, 150, 120};     // 12
-int machine_angle[3] = {70, 110, -80};     // 13
-int upwind_angle[3] = {75, 80, 85};     // 14
-int downwind_angle[3] = {110, 120, 105};     // 15
-int distance_return[3] = {100, 50, 80};     // 16
-double battery[3] = {8.0, 7.4, 4.5};     // 17
-double wind_axis_distance[3] = {150.8, 180.8, 120.33};     // 18
-double wind_cross_distance[3] = {140.83, 18.8, 12.33};     // 19
-int potentioval[3] = {50, 54, 80};     // 20
-double distance_target[3] = {240.83, 118.8, 112.33};     // 21
-double distance_lat[3] = {150.8, 180.8, 120.33};     // 22
-double distance_long[3] = {140.83, 18.8, 12.33};     // 23
-int target_deg[3] = {89, 112, 133};     // 24
-int compass_deg[3] = {189, 222, 163};     // 25
+int WindVelocity[3] = {50, 100, 150};   // 7
+int Sail_Base_Angle[3] = {15, 20, 25};   // 8
+int Sail_Angle[3] = {20, 25, 30};   // 9
+int rudderAngle[3] = {10, 15, 20};   // 10
+int windDeg[3] = {-15, 15, 30};     // 11
+int windTargetAngle[3] = {135, 150, 120};     // 12
+int machineAngle[3] = {70, 110, -80};     // 13
+int upwindAngle[3] = {75, 80, 85};     // 14
+int downwindAngle[3] = {110, 120, 105};     // 15
+int dis_return[3] = {100, 50, 80};     // 16
+double volt[3] = {8.0, 7.4, 4.5};     // 17
+double windAxisDistance[3] = {150.8, 180.8, 120.33};     // 18
+double windCrossDistance[3] = {140.83, 18.8, 12.33};     // 19
+int potentioVal[3] = {50, 54, 80};     // 20
+double disTarget[3] = {240.83, 118.8, 112.33};     // 21
+double disLat[3] = {150.8, 180.8, 120.33};     // 22
+double disLong[3] = {140.83, 18.8, 12.33};     // 23
+int targetDeg[3] = {89, 112, 133};     // 24
+int compassDeg[3] = {189, 222, 163};     // 25
 double tempBME280[3] = {28.4, 25.5, 19.9};     // 26
 double humidBME280[3] = {50.5, 45.4, 51.3};     // 27
 double presBME280[3] = {1012.83, 1008.8, 1002.33};     // 28
-double gpsSpeed[3] = {3.3, 4.4, 4.2};     // 29
-int gpsCourse[3] = {130, 140, 150};     // 30
+double dGPSSpdMph[3] = {3.3, 4.4, 4.2};     // 29
+int dGPSCourse[3] = {130, 140, 150};     // 30
 int goDirection[3] = {189, 222, 163};     // 31
-int potentiovalAve[3] = {11, 22, 33};     // 32
+int potentioValAve[3] = {11, 22, 33};     // 32
+int iGpsYear[3] = {1999, 2000, 2020};     // 27
+int iGpsMonth[3] = {1, 9, 12};     // 28
+int iGpsDay[3] = {2, 11, 31};     // 29
+int iGpsHour[3] = {13, 14, 15};     // 30
+int iGpsMinute[3] = {5, 10, 59};     // 31
+int iGpsSecond[3] = {0, 9, 44};     // 32
 
 void sendDblData(String key, double data, int format)
 {
@@ -100,27 +112,50 @@ void sendStrData(String key, String data)
 }
 
 void sendData() {
+    sendStrData(KEY_LR, strLR[i]);
+    sendStrData(KEY_UP_DOWN, strUpDown[i]);
+    sendIntData(KEY_DATA_COUNT, count[i]);
+
+    sendDblData(KEY_TARGET_LAT, targetGPSLat[i], 6);
+    sendDblData(KEY_TARGET_LONG, targetGPSLong[i], 6);
     sendDblData(KEY_GPS_LAT, dGPSLat[i], 6);
     sendDblData(KEY_GPS_LONG, dGPSLong[i], 6);
-    sendIntData(KEY_GPS_ALT, round(m_dGpsAlt));
+    // sendIntData(KEY_GPS_ALT, round(m_dGpsAlt));
+
+    sendIntData(KEY_WIND_VELOCITY, WindVelocity[i]);
+    sendIntData(KEY_SAIO_BANGLE, Sail_Base_Angle[i]);
+    sendIntData(KEY_SAIL_ANGLE, Sail_Angle[i]);
+    sendIntData(KEY_RUDDER_ANGLE, rudderAngle[i]);
+    sendIntData(KEY_WIND_DEGREE, windDeg[i]);
+    sendIntData(KEY_WIND_TANGLE, windTargetAngle[i]);
+    sendIntData(KEY_MACHINE_ANGLE, machineAngle[i]);
+    sendIntData(KEY_UPWIND_ANGLE, upwindAngle[i]);
+    sendIntData(KEY_DOWNWIND_ANGLE, downwindAngle[i]);
+    sendIntData(KEY_DISTANCE_RETURN, dis_return[i]);
+    sendDblData(KEY_BATTERY_VOLT, volt[i], 1);
+    sendDblData(KEY_WIND_AXISD, windAxisDistance[i], 1);
+    sendDblData(KEY_WIND_CROSSD, windCrossDistance[i], 1);
+    sendIntData(KEY_POTENTIO_VAL, potentioVal[i]);
+    sendDblData(KEY_DISTANCE_TARGET, disTarget[i], 1);
+    sendDblData(KEY_DISTANCE_LAT, disLat[i], 1);
+    sendDblData(KEY_DISTANCE_LONG, disLong[i], 1);
+    sendIntData(KEY_TARGET_DEGREE, targetDeg[i]);
+    sendIntData(KEY_COMPASS_DEGREE, compassDeg[i]);
+    sendDblData(KEY_TEMP_BME280, tempBME280[i], 1);
+    sendDblData(KEY_HUMID_BME280, humidBME280[i], 1);
+    sendDblData(KEY_PRESSURE_BME280, presBME280[i], 1);
+    sendDblData(KEY_GPS_SPD_MPH, dGPSSpdMph[i], 1);
+    sendIntData(KEY_GPS_COURSE, dGPSCourse[i]);
+    sendIntData(KEY_GO_DIRECTION, goDirection[i]);
+    sendIntData(KEY_POTENTIOVAL_AVE, potentioValAve[i]);
 
     //日時
-    sendIntData(KEY_GPS_YEAR, m_iGpsYear);
-    sendIntData(KEY_GPS_MONTH, m_iGpsMonth);
-    sendIntData(KEY_GPS_DAY, m_iGpsDay);
-    sendIntData(KEY_GPS_HOUR, m_iGpsHour);
-    sendIntData(KEY_GPS_MINUTE, m_iGpsMinute);
-    sendIntData(KEY_GPS_SECOND, m_iGpsSecond);
-
-    //速度
-    sendDblData(KEY_GPS_SPD_MPH, m_dGpsSpdMph, 1);
-
-    //コース
-    sendDblData(KEY_GPS_COURSE, m_dGpsCourse, 1);
-    sendDblData(KEY_GPS_COURSE_AVE, m_dGpsCourseAve, 1);
-
-    //地磁気
-    sendIntData(KEY_COMPASS, m_iAngle);
+    sendIntData(KEY_GPS_YEAR, iGpsYear[i]);
+    sendIntData(KEY_GPS_MONTH, iGpsMonth[i]);
+    sendIntData(KEY_GPS_DAY, iGpsDay[i]);
+    sendIntData(KEY_GPS_HOUR, iGpsHour[i]);
+    sendIntData(KEY_GPS_MINUTE, iGpsMinute[i]);
+    sendIntData(KEY_GPS_SECOND, iGpsSecond[i]);
 }
 
 void setup() {
