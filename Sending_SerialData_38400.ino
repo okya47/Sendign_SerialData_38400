@@ -39,8 +39,8 @@ const String KEY_GPS_HOUR = "hour="; // 36 GPS HOURキー
 const String KEY_GPS_MINUTE = "mnte="; // 37 GPS MINUTEキー
 const String KEY_GPS_SECOND = "scnd="; // 38 GPS SECONDキー
 
-String strLR[3] = {L, R, L};   // 0
-String strUpDown[3] = {UP, DOWN, DOWN};    // 1
+String strLR[3] = {"L", "R", "L"};   // 0
+String strUpDown[3] = {"UP", "DOWN", "DOWN"};    // 1
 int count[3] = {100, 200, 300};     // 2
 double targetGPSLat[3] = {36.277450, 36.277450, 36.277450};    // 3
 double targetGPSLong[3] = {140.45869, 140.45869, 140.45869};   // 4
@@ -92,7 +92,7 @@ void sendIntData(String key, int data)
     //改行を含めないデータを送信する
     Serial.print(key);
     Serial.print(data);
-    Serial.print(";");
+    Serial.println(";");
 }
 
 void sendLongData(String key, long data)
@@ -100,7 +100,7 @@ void sendLongData(String key, long data)
     //改行を含めないデータを送信する
     Serial.print(key);
     Serial.print(data);
-    Serial.print(";");
+    Serial.println(";");
 }
 
 void sendStrData(String key, String data)
@@ -108,7 +108,7 @@ void sendStrData(String key, String data)
     //改行を含めないデータを送信する
     Serial.print(key);
     Serial.print(data);
-    Serial.print(";");
+    Serial.println(";");
 }
 
 void sendData() {
